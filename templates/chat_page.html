@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h3>Detected mood: {{ emotion }}</h3>
+
+<div id="chat-box" style="height:400px;overflow-y:auto;border:1px solid #ccc;padding:10px;"></div>
+
+<input id="chat-input" placeholder="Type a message..." />
+<button onclick="sendMessage()">Send</button>
+
+<div style="display: flex; justify-content: flex-end; margin-top: 15px;">
+    <form action="{{ url_for('upload_image') }}" method="get">
+        <button type="submit">Upload New Image</button>
+    </form>
+</div>
+
+<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}

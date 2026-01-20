@@ -1,0 +1,128 @@
+/* --- BASE --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Garamond', serif;
+    font-size: 18px;
+    background: linear-gradient(to bottom right, #e0f7fa, #eceff1);
+    color: #333;
+}
+
+/* --- CONTAINER --- */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* --- HEADINGS --- */
+h2, h3 {
+    margin-bottom: 20px;
+    font-weight: normal;
+    color: #37474f;
+}
+
+/* --- IMAGE --- */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* --- FORMS & BUTTONS --- */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+input[type="file"] {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #43A047, #57A05B);
+    transform: translateY(-2px);
+}
+
+/* --- CHAT BOX --- */
+#chat-box {
+    height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+    margin-bottom: 15px;
+}
+
+/* --- CHAT MESSAGES --- */
+#chat-box div {
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+    display: inline-block;
+}
+
+#chat-box .user {
+    background-color: #c8e6c9;
+    align-self: flex-end;
+}
+
+#chat-box .ai {
+    background-color: #e0f7fa;
+    align-self: flex-start;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+
+    button, input[type="file"] {
+        width: 100%;
+    }
+
+    #chat-box {
+        height: 300px;
+    }
+}
